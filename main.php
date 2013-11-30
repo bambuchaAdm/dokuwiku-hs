@@ -11,13 +11,39 @@
 
 if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
 header('X-UA-Compatible: IE=edge,chrome=1');
-
 $hasSidebar = page_findnearest($conf['sidebar']);
 $showSidebar = $hasSidebar && ($ACT=='show');
 ?><!DOCTYPE html>
 <html lang="<?php echo $conf['lang'] ?>" dir="<?php echo $lang['direction'] ?>" class="no-js">
-<head>
-    <meta charset="utf-8" />
+  <head>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="pl-PL" />
+
+	<link href="http://hackerspace-krk.pl/wp-content/themes/hskrk/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="http://hackerspace-krk.pl/wp-content/themes/hskrk/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+	<link href="http://hackerspace-krk.pl/wp-content/themes/hskrk/style.css" rel="stylesheet" />
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	    <script src="http://hackerspace-krk.pl/wp-content/themes/hskrk/bootstrap/js/html5shiv.js"></script>
+	<![endif]-->
+
+	<style>
+	  .leannnnnd {
+	      margin-bottom: 30px;
+	  }
+	  #count {
+	      font-size: 3em;
+	      line-height: 1em;
+	  }
+	  .copyright {
+	      font-size: 0.7em;
+	  }
+	</style>
+
+
+
     <title><?php tpl_pagetitle() ?> [<?php echo strip_tags($conf['title']) ?>]</title>
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
     <?php tpl_metaheaders() ?>
