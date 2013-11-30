@@ -18,8 +18,8 @@ if (!defined('DOKU_INC')) die();
   <div class="span8">
 	<div id="topmenu">
 	  <?php if ($conf['useacl']): ?>
-        <ul id="menu-gorne-menu" class="nav nav-pills" >
-          <?php
+        <ul class="nav nav-pills" >
+          <?php 
              tpl_action('admin', 1, 'li');
              tpl_action('profile', 1, 'li');
              tpl_action('register', 1, 'li');
@@ -28,6 +28,23 @@ if (!defined('DOKU_INC')) die();
         </ul>
       <?php endif ?>
 	</div>
+  </div>
+</div>
+
+<div class="row">
+  <div id="dokuwiki__sitetools">
+    <h3 class="a11y"><?php echo $lang['site_tools']; ?></h3>
+    <?php tpl_searchform(); ?>
+    <div class="mobileTools">
+      <?php tpl_actiondropdown($lang['tools']); ?>
+    </div>
+    <ul>
+      <?php
+         tpl_action('recent', 1, 'li');
+         tpl_action('media', 1, 'li');
+         tpl_action('index', 1, 'li');
+         ?>
+    </ul>
   </div>
 </div>
 
@@ -45,21 +62,7 @@ if (!defined('DOKU_INC')) die();
         <!-- USER TOOLS -->
 
         <!-- SITE TOOLS -->
-        <div id="dokuwiki__sitetools">
-            <h3 class="a11y"><?php echo $lang['site_tools']; ?></h3>
-            <?php tpl_searchform(); ?>
-            <div class="mobileTools">
-                <?php tpl_actiondropdown($lang['tools']); ?>
-            </div>
-            <ul>
-                <?php
-                    tpl_action('recent', 1, 'li');
-                    tpl_action('media', 1, 'li');
-                    tpl_action('index', 1, 'li');
-                ?>
-            </ul>
-        </div>
-
+        
     </div>
 
     <!-- BREADCRUMBS -->
