@@ -18,7 +18,7 @@ if (!defined('DOKU_INC')) die();
   <div class="span8">
 	<div id="topmenu">
 	  <?php if ($conf['useacl']): ?>
-        <ul class="menu-gorne-menu">
+        <ul id="menu-gorne-menu" class="nav nav-pills" >
           <?php
              if (!empty($_SERVER['REMOTE_USER'])) {
              echo '<li class="user menu-item">';
