@@ -22,7 +22,7 @@ if (!defined('DOKU_INC')) die();
           <?php
              if (!empty($_SERVER['REMOTE_USER'])) {
              echo '<li class="user menu-item">';
-             echo $_SERVER['REMOTE_USER'];
+             echo '<span class="action">'.$_SERVER['REMOTE_USER'].'</span>';
              echo '</li>';
              }
              tpl_action('admin', 1, 'li');
