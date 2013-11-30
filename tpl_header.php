@@ -20,7 +20,7 @@ if (!defined('DOKU_INC')) die();
 	  <?php if ($conf['useacl']): ?>
       <div id="dokuwiki__usertools">
         <h3 class="a11y"><?php echo $lang['user_tools']; ?></h3>
-        <ul>
+        <ul class="menu-gorne-menu">
           <?php
              if (!empty($_SERVER['REMOTE_USER'])) {
              echo '<li class="user">';
@@ -35,7 +35,6 @@ if (!defined('DOKU_INC')) die();
         </ul>
       </div>
       <?php endif ?>
-
 	</div>
   </div>
 </div>
