@@ -21,7 +21,7 @@ if (!defined('DOKU_INC')) die();
         <ul class="menu-gorne-menu">
           <?php
              if (!empty($_SERVER['REMOTE_USER'])) {
-             echo '<li class="user">';
+             echo '<li class="user menu-item">';
              tpl_userinfo(); /* 'Logged in as ...' */
              echo '</li>';
              }
