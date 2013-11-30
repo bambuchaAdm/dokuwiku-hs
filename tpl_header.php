@@ -18,7 +18,6 @@ if (!defined('DOKU_INC')) die();
   <div class="span8">
 	<div id="topmenu">
 	  <?php if ($conf['useacl']): ?>
-      <div id="dokuwiki__usertools">
         <h3 class="a11y"><?php echo $lang['user_tools']; ?></h3>
         <ul class="menu-gorne-menu">
           <?php
@@ -33,7 +32,6 @@ if (!defined('DOKU_INC')) die();
              tpl_action('login', 1, 'li');
              ?>
         </ul>
-      </div>
       <?php endif ?>
 	</div>
   </div>
