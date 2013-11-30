@@ -55,33 +55,18 @@ $showSidebar = $hasSidebar && ($ACT=='show');
   <body class="home blog">
 	<div id="top">
 	  <div class="container">
-		<div class="row">
-		  <div class="span4">
-			<div id="mainlogo">
-			  <a href="http://hackerspace-krk.pl/"><img src="http://hackerspace-krk.pl/wp-content/themes/hskrk/images/logo.png" alt="Hackerspace Kraków" /></a>
-			</div>
-		  </div>
-		  <div class="span8">
-			<div id="topmenu">
-			  <ul  id="menu-gorne-menu" class="nav nav-pills">
-				<li class="menu-item"><a href="http://hackerspace-krk.pl/kategoria/blog">Blog</a></li>
-				<li class="menu-item"><a target="_blank" href="http://wiki.hackerspace-krk.pl">Wiki</a></li>
-			  </ul>
-			</div>
-		  </div>
-		</div>
+		<?php include('tpl_header.php') ?>
 	  </div>
 	</div>
 
 	<div id="ornament1"></div>
 
-
     <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
     <div id="dokuwiki__site"><div id="dokuwiki__top" class="site <?php echo tpl_classes(); ?> <?php
         echo ($showSidebar) ? 'showSidebar' : ''; ?> <?php echo ($hasSidebar) ? 'hasSidebar' : ''; ?>">
+		<!-- BEGIN header -->
 
-        <?php include('tpl_header.php') ?>
-
+		<!-- END header -->
         <div class="wrapper group">
 
             <?php if($showSidebar): ?>
