@@ -32,8 +32,7 @@ if (!defined('DOKU_INC')) die();
 </div>
 
 <div class="row">
-  <div id="dokuwiki__sitetools">
-    <h3 class="a11y"><?php echo $lang['site_tools']; ?></h3>
+  <div id="nav">
     <?php tpl_searchform(); ?>
     <div class="mobileTools">
       <?php tpl_actiondropdown($lang['tools']); ?>
