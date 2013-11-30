@@ -20,11 +20,6 @@ if (!defined('DOKU_INC')) die();
 	  <?php if ($conf['useacl']): ?>
         <ul id="menu-gorne-menu" class="nav nav-pills" >
           <?php
-             if (!empty($_SERVER['REMOTE_USER'])) {
-             echo '<li class="user menu-item">';
-             echo '<span class="action">'.$_SERVER['REMOTE_USER'].'</span>';
-             echo '</li>';
-             }
              tpl_action('admin', 1, 'li');
              tpl_action('profile', 1, 'li');
              tpl_action('register', 1, 'li');
