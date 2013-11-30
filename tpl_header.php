@@ -17,6 +17,24 @@ if (!defined('DOKU_INC')) die();
   </div>
   <div class="span8">
 	<div id="topmenu">
+	  <?php if ($conf['useacl']): ?>
+      <div id="dokuwiki__usertools">
+        <h3 class="a11y"><?php echo $lang['user_tools']; ?></h3>
+        <ul>
+          <?php
+             if (!empty($_SERVER['REMOTE_USER'])) {
+             echo '<li class="user">';
+             tpl_userinfo(); /* 'Logged in as ...' */
+             echo '</li>';
+             }
+             tpl_action('admin', 1, 'li');
+             tpl_action('profile', 1, 'li');
+             tpl_action('register', 1, 'li');
+             tpl_action('login', 1, 'li');
+             ?>
+        </ul>
+      </div>
+      <?php endif ?>
 
 	</div>
   </div>
@@ -34,24 +52,6 @@ if (!defined('DOKU_INC')) die();
 
     <div class="tools group">
         <!-- USER TOOLS -->
-        <?php if ($conf['useacl']): ?>
-            <div id="dokuwiki__usertools">
-                <h3 class="a11y"><?php echo $lang['user_tools']; ?></h3>
-                <ul>
-                    <?php
-                        if (!empty($_SERVER['REMOTE_USER'])) {
-                            echo '<li class="user">';
-                            tpl_userinfo(); /* 'Logged in as ...' */
-                            echo '</li>';
-                        }
-                        tpl_action('admin', 1, 'li');
-                        tpl_action('profile', 1, 'li');
-                        tpl_action('register', 1, 'li');
-                        tpl_action('login', 1, 'li');
-                    ?>
-                </ul>
-            </div>
-        <?php endif ?>
 
         <!-- SITE TOOLS -->
         <div id="dokuwiki__sitetools">
