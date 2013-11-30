@@ -52,7 +52,7 @@ $showSidebar = $hasSidebar && ($ACT=='show');
     <?php tpl_includeFile('meta.html') ?>
 </head>
 
-  <body class="home blog">
+  <body class="home dokuwiki">
 	<div id="top">
 	  <div class="container">
 		<?php include('tpl_header.php') ?>
